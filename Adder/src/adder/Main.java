@@ -7,7 +7,7 @@ public class Main {
             int result = addArguments(args);
             System.out.println(result);
         } catch (java.lang.NumberFormatException e) {
-            System.err.println(e);
+            System.err.println("Invalid input!");
         } catch (IllegalArgumentException e) {
             System.err.println(e);
         }
@@ -16,18 +16,18 @@ public class Main {
     private static int addArguments(String[] args) {
         int res = 0;
         if (args.length >= 1) {
-        if (args[0].contains("-")) {
-            for (int i = 1; i < args.length; i++) {
-                res -= Integer.valueOf(args[i]);
+            if (args[0].contains("-")) {
+                for (int i = 1; i < args.length; i++) {
+                    res -= Integer.valueOf(args[i]);
+                }
+            } else {
+                for (int i = 0; i < args.length; i++) {
+                    res += Integer.valueOf(args[i]);
+                }
             }
         } else {
-            for (int i = 0; i < args.length; i++) {
-                res += Integer.valueOf(args[i]);
-            }
+            throw new IllegalArgumentException("Not enough args");
         }
-} else {
-throw new IllegalArgumentException("Not enough args");
-}
         return res;
     }
 }
