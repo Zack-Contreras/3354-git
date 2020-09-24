@@ -6,15 +6,21 @@ public class Main {
         try {
             int result = addArguments(args);
             System.out.println(result);
-        } catch (Exception e) {
-            System.err.println("Please provide a list of integers to add");
+        } catch (java.lang.NumberFormatException e) {
+            System.err.println(e);
+        } catch (IllegalArgumentException e) {
+            System.err.println(e);
         }
     }
 
     private static int addArguments(String[] args) {
         int res = 0;
-        for (int i = 0; i < args.length; i++) {
-            res += Integer.valueOf(args[i]);
+        if (args.length >= 1) {
+            for (int i = 0; i < args.length; i++) {
+                res += Integer.valueOf(args[i]);
+            }
+        } else {
+            throw new IllegalArgumentException("Not enough args");
         }
         return res;
     }
