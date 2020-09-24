@@ -1,3 +1,5 @@
+Zack Contreras
+
 a) 5 commits from original author and 2 commits from me -> 7 Total Commits
 
 b) 4 years ago - Jan 24, 2017
@@ -8,11 +10,13 @@ c) git log -> shows history of commits, shows project history
 d) untracked files are files which git has no record of and must be added using git add command to put in the staged area.
    
    Once an unstaged file is added to your staged area it becomes tracked. They are files which are not in the staged area. 
+   Unstaged changes can exist in your working directory but they are not recorded in version history yet.
 
 e) git checkout -> allows you to checkout or navigate to different branches created by the git project
    git reset -> takes current branch and resets it to point somewhere else and can bring the index and work tree with it. Will remove commits.
 
 
-f)
+f)When trying to pull when there are uncommitted changes, you will get a notice in your terminal that you are behind by a certain number of commits when doing a git status.
+  This can lead to conflicts which must be manually resolved OR you can stash your changes and then pull in without any problems. 
 
  
