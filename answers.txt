@@ -1,0 +1,18 @@
+a) 5 commits from original author and 2 commits from me -> 7 Total Commits
+
+b) 4 years ago - Jan 24, 2017
+
+c) git log -> shows history of commits, shows project history
+   git status -> inspect current working directory and staging area 
+
+d) untracked files are files which git has no record of and must be added using git add command to put in the staged area.
+   
+   Once an unstaged file is added to your staged area it becomes tracked. They are files which are not in the staged area. 
+
+e) git checkout -> allows you to checkout or navigate to different branches created by the git project
+   git reset -> takes current branch and resets it to point somewhere else and can bring the index and work tree with it. Will remove commits.
+
+
+f)
+
+ 
